@@ -1,4 +1,5 @@
-const { sbiCards } = require('./controller/sbiCards');
+
+const { lead_generator } = require('./controller/lead-generator');
 const { schema } = require('./middleware/validatSchema');
 const checkSchemaValidation = require('./middleware/validation');
 
@@ -9,6 +10,6 @@ routes.get('/', (req, res) => {
   });
 
 
-  routes.post('/test', checkSchemaValidation(schema), sbiCards);
+  routes.post('/test', checkSchemaValidation(schema), lead_generator);
 
 module.exports = routes

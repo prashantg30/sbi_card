@@ -65,3 +65,5 @@ async function oAuth() {
         return false
     }
 }
+
+module.exports = oAuth
